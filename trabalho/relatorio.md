@@ -1,14 +1,15 @@
-# Relatório do Trabalho de Computação Gráfica - Renderizador OBJ
+# Relatório do Trabalho de Computação Gráfica
 
-**Nome:** [Seu Nome Aqui]
-**Matrícula:** [Sua Matrícula Aqui]
+**Nome:** Vitoria Araujo Lima de Sousa
+
+**Matrícula:** 20231001026
 
 ## Instruções de Compilação e Execução
 
 ### Pré-requisitos
-- Sistema Operacional: macOS (testado)
+- Sistema Operacional: macOS
 - Compilador: `g++` (clang)
-- Bibliotecas: OpenGL e GLUT (nativas do macOS)
+- Bibliotecas: OpenGL e GLUT
 - `stb_image.h`: Incluído no diretório do projeto.
 
 ### Compilação
@@ -42,7 +43,7 @@ O programa foi testado com sucesso com os seguintes modelos, que foram adaptados
 3.  **Coelho de Stanford (bunny.obj)**: Modelo de alta densidade.
 4.  **Caixa de Cornell (cornell_box.obj)**: Cena clássica de teste de iluminação.
 
-Todos os modelos utilizam o arquivo de material `box.mtl` e a textura `test_texture.png`.
+Todos os modelos utilizam o arquivo de material `box.mtl` e a textura `test_texture.png` (um gradiente de cores).
 
 ## Recursos Implementados
 
