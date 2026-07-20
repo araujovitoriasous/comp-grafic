@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -Wall -std=c++11 -Wno-deprecated-declarations
+CFLAGS = -Wall -std=c++11 -Wno-deprecated-declarations -isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1
 LDFLAGS = -framework OpenGL -framework GLUT
 
 all: questao1 questao2

@@ -1,9 +1,9 @@
 // Questao 2: Tela em branco; clique esquerdo desenha ponto preto tamanho 50;
 // clique direito limpa a tela.
 
-#include <GLUT/glut.h>
 #include <vector>
 #include <utility>
+#include <GLUT/glut.h>
 
 void init();
 void display();
