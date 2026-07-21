@@ -1,11 +1,31 @@
 # Tarefa 1 - Computação Gráfica
 
-Dois programas OpenGL/GLUT desenvolvidos para macOS.
+Dois programas OpenGL/GLUT desenvolvidos e testados no **macOS**, com adaptações para rodar também no **Linux** e **Windows**.
 
-## Requisitos
+## Compatibilidade
 
-- macOS com Xcode Command Line Tools instalado
-- OpenGL e GLUT (já incluídos no macOS)
+| Sistema | Suporte |
+|---------|---------|
+| macOS | Desenvolvido e testado aqui |
+| Linux | Adaptado (requer FreeGLUT) |
+| Windows | Adaptado (requer FreeGLUT via MinGW) |
+
+O Makefile detecta o sistema operacional automaticamente e aplica os flags e includes corretos para cada plataforma.
+
+## Requisitos por plataforma
+
+**macOS**
+- Xcode Command Line Tools (`xcode-select --install`)
+- OpenGL e GLUT já incluídos no sistema
+
+**Linux**
+```bash
+sudo apt install freeglut3-dev
+```
+
+**Windows (MinGW)**
+- MinGW com g++
+- FreeGLUT instalado e configurado no PATH
 
 ## Compilação
 
