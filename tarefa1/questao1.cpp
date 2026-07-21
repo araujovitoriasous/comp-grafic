@@ -12,7 +12,7 @@ void keyboard(unsigned char key, int x, int y);
 bool telaEscura = false;
 
 void init() {
-    glClearColor(0.7f, 0.85f, 1.0f, 1.0f);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -23,8 +23,8 @@ void init() {
 }
 
 void drawHouse() {
-    // Corpo da casa (quadrado marrom)
-    glColor3f(0.8f, 0.6f, 0.2f);
+    // Corpo da casa (roxo)
+    glColor3f(0.5f, 0.0f, 0.8f);
     glBegin(GL_QUADS);
     glVertex2f(-0.4f, -0.5f);
     glVertex2f(0.4f, -0.5f);
@@ -33,37 +33,40 @@ void drawHouse() {
     glEnd();
 
     // Telhado (triangulo vermelho)
-    glColor3f(0.9f, 0.2f, 0.2f);
+    glColor3f(0.9f, 0.1f, 0.1f);
     glBegin(GL_TRIANGLES);
     glVertex2f(-0.5f, 0.1f);
     glVertex2f(0.5f, 0.1f);
-    glVertex2f(0.0f, 0.5f);
+    glVertex2f(0.0f, 0.55f);
     glEnd();
 
-    // Porta (retangulo marrom escuro)
-    glColor3f(0.4f, 0.2f, 0.1f);
+    // Porta (branca, lado esquerdo do centro)
+    glColor3f(1.0f, 1.0f, 1.0f);
     glBegin(GL_QUADS);
-    glVertex2f(-0.1f, -0.5f);
-    glVertex2f(0.1f, -0.5f);
-    glVertex2f(0.1f, -0.1f);
-    glVertex2f(-0.1f, -0.1f);
+    glVertex2f(-0.22f, -0.5f);
+    glVertex2f(-0.02f, -0.5f);
+    glVertex2f(-0.02f, -0.1f);
+    glVertex2f(-0.22f, -0.1f);
     glEnd();
 
-    // Janela esquerda (quadrado azul claro)
-    glColor3f(0.6f, 0.8f, 1.0f);
+    // Janela com grade (lado direito), fundo branco
+    glColor3f(1.0f, 1.0f, 1.0f);
     glBegin(GL_QUADS);
-    glVertex2f(-0.35f, -0.05f);
-    glVertex2f(-0.15f, -0.05f);
-    glVertex2f(-0.15f, 0.05f);
-    glVertex2f(-0.35f, 0.05f);
-    glEnd();
-
-    // Janela direita (quadrado azul claro)
-    glBegin(GL_QUADS);
-    glVertex2f(0.15f, -0.05f);
-    glVertex2f(0.35f, -0.05f);
+    glVertex2f(0.08f, -0.22f);
+    glVertex2f(0.35f, -0.22f);
     glVertex2f(0.35f, 0.05f);
-    glVertex2f(0.15f, 0.05f);
+    glVertex2f(0.08f, 0.05f);
+    glEnd();
+
+    // Grade da janela - linha vertical
+    glColor3f(0.3f, 0.3f, 0.3f);
+    glLineWidth(2.0f);
+    glBegin(GL_LINES);
+    glVertex2f(0.215f, -0.22f);
+    glVertex2f(0.215f, 0.05f);
+    // linha horizontal
+    glVertex2f(0.08f, -0.085f);
+    glVertex2f(0.35f, -0.085f);
     glEnd();
 }
 
@@ -109,7 +112,7 @@ void keyboard(unsigned char key, int x, int y) {
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-    glutInitWindowSize(600, 600);
+    glutInitWindowSize(800, 700);
     glutCreateWindow("Questao 1 - Casa");
 
     init();
