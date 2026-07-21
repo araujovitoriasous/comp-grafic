@@ -2,7 +2,13 @@
 // Ao pressionar espaco, a tela escurece.
 // Se o fundo estiver escuro e o usuario pressionar qualquer tecla, o fundo torna-se branco.
 
-#include <GLUT/glut.h>
+#ifdef _WIN32
+    #include <GL/glut.h>
+#elif defined(__APPLE__)
+    #include <GLUT/glut.h>
+#else
+    #include <GL/glut.h>
+#endif
 
 void init();
 void display();
